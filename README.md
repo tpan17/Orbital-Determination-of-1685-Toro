@@ -1,1 +1,13 @@
 # Orbital-Determination-of-1685-Toro
+
+The purpose of the experiment was to determine the orbit of the near-earth asteroid 1685 Toro (1948 OA) from CCD images of the asteroid taken during June and July 2015. Observations were conducted with a 14" Celestron Schmidt Cassegrain telescope at Etscorn Observatory in New Mexico Tech in Socorro, NM and a 20" Ritchey Chretien telescope located at the Calumet Astronomy Center at Purdue University in Lowell, Indiana. The orbital elements were determined using Gauss’ method of orbital determination.
+
+It is important to analyze the orbit of 1685 Toro since it intersects with the Earth’s orbit and numerical integration techniques can reveal whether a collision with the Earth is likely. However improbable a collision between Toro and Earth may be, orbital determination remains essential since the solar system is littered with potential impacters. Finally, the orbital elements of Toro and similar asteroids are useful when considering future missions to asteroids for analysis or retrieval.
+
+Before each scheduled observation at Etscorn Observatory, the location of 1685 Toro was estimated by generating ephemerides using the JPL Horizons database. TheSkyX Pro was then used to find reference stars in the field of view to help confirm that the telescope would be slewed to the correct position. During each observation period, multiple sets of images of the asteroid were taken as well as 11 bias, 5 dark, and 11 flat field images for image reduction purposes. After each observation, the images were reduced and aligned to pinpoint the location of the moving asteroid relative to the stationary stars in the field of view. 
+
+Then astrometry was performed through least squares plate reduction (LSPR folder). LSPR uses the right ascensions and declinations of 24 known stars found through TheSkyX to produce six plate constants that can be used to calculate the right ascension and declination of the asteroid.
+
+Afterwards, aperture photometry was performed to determine magnitude of the asteroid (Photometry folder). The pizel coordinates and magnitudes of 5 known stars were placed into an input file. The python code slices out a circular aperture and background annulus around the stars and calculates a constant. That same aperture and annulus was applied ot the asteroid, and the constant was used to find the magnitude of the asteroid.
+
+centroidcode.py calculates the centroid of the asteroid for the sets of images obtained over the three observations done. The OD folder contains files that use Gauss’ method of orbital determination and the three centroid coordinates to calculate the asteroid’s orbital elements, as well as their respective degrees of uncertainty. 
