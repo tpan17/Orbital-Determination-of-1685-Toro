@@ -1,0 +1,10 @@
+﻿Star		x		y		mag
+
+1		645.695		138.299		15.19
+2		616.535		61.3154		14.93
+3		561.713		42.6527		15.74
+4		505.725		77.6453		15.91
+5		543.051		141.798		15.77
+Asteroid	630.443		107.208		15.77(JPL value)
+
+NOTE: you have to manually input these values as the code asks for them
